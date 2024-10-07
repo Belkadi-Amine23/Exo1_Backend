@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des utilisateurs</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mx-auto mt-8">
+        <h1 class="text-2xl font-bold mb-4">Liste des utilisateurs inscrits</h1>
+        <table class="table-auto border-collapse w-full">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2 border">Nom</th>
+                    <th class="px-4 py-2 border">Prénom</th>
+                    <th class="px-4 py-2 border">Numéro d'Identité</th>
+                    <th class="px-4 py-2 border">Téléphone</th>
+                    <th class="px-4 py-2 border">Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% users.forEach((user) => { %>
+                    <tr>
+                        <td class="border px-4 py-2"><%= user.name %></td>
+                        <td class="border px-4 py-2"><%= user.surname %></td>
+                        <td class="border px-4 py-2"><%= user.nationalId %></td>
+                        <td class="border px-4 py-2"><%= user.phone %></td>
+                        <td class="border px-4 py-2"><%= user.email %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+        <button onclick="window.location.href='/'" class="bg-blue-500 text-white p-2 rounded mt-4">Retour à l'inscription</button>
+    </div>
+</body>
+</html>

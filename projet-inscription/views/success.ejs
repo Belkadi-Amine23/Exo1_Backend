@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription réussie</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded shadow-md w-96 text-center">
+        <h1 class="text-2xl font-bold mb-4">Inscription réussie !</h1>
+        <p class="mb-4">Merci, <strong><%= user.name %> <%= user.surname %></strong> pour votre inscription.</p>
+        <p>ID : <%= user.nationalId %></p>
+        <p>Téléphone : <%= user.phone %></p>
+        <p>Email : <%= user.email %></p>
+        <button onclick="window.location.href='/'" class="bg-blue-500 text-white p-2 rounded mt-4">Retour à l'inscription</button>
+        <button onclick="window.location.href='/users'" class="bg-green-500 text-white p-2 rounded mt-4">Voir les utilisateurs</button>
+    </div>
+</body>
+</html>
